@@ -10,13 +10,23 @@ export interface Tela {
     proveedor: string;
 }
 
+export interface TelaAsociada {
+    telaId: string;
+    telaNombre: string;
+    precioMetro: string;
+    metros: string;
+}
+
 export interface ModeloPantalon {
     id: string;
     nombre: string;
     descripcion: string;
     tipo: string;
-    tallas: string;
-    precioBase: string;
+    tallasNumericas: string[];
+    tallasEspeciales: string[];
+    costoProces: string;
+    telasAsociadas: TelaAsociada[];
+    precioVenta: string;
     foto?: string;
     activo: boolean;
     fechaCreacion: string;
